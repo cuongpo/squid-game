@@ -50,6 +50,9 @@ api-keys.txt
 secrets.json
 config.secret.js
 config.secret.ts
+jwt-token.txt
+auth-tokens.json
+*.jwt
 
 # Hardhat files
 /cache

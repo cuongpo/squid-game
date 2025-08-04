@@ -22,14 +22,18 @@ const DANGEROUS_PATTERNS = [
   // Private keys
   /PRIVATE_KEY\s*=\s*[a-fA-F0-9]{64}/,
   /private.*key.*[a-fA-F0-9]{64}/i,
-  
+
   // OpenAI API keys
   /VITE_OPENAI_API_KEY\s*=\s*sk-[a-zA-Z0-9]{48}/,
   /openai.*api.*key.*sk-[a-zA-Z0-9]{48}/i,
-  
+
+  // JWT tokens (real ones start with eyJ)
+  /eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+/,
+  /jwt.*eyJ[A-Za-z0-9_-]/i,
+
   // Thirdweb API keys
   /VITE_THIRDWEB_API_KEY\s*=\s*[a-zA-Z0-9]{32,}/,
-  
+
   // Generic secrets
   /secret.*[a-zA-Z0-9]{20,}/i,
   /password.*[a-zA-Z0-9]{8,}/i,
@@ -63,7 +67,9 @@ const SHOULD_BE_GITIGNORED = [
   'wallet.json',
   'openai-key.txt',
   'api-keys.txt',
-  'secrets.json'
+  'secrets.json',
+  'jwt-token.txt',
+  'auth-tokens.json'
 ];
 
 function checkGitignore() {

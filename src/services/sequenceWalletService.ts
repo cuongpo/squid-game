@@ -112,8 +112,8 @@ export class SequenceWalletService {
     return new Promise((resolve) => {
       // Simulate user authentication
       setTimeout(() => {
-        // This is a mock JWT token for demo purposes
-        const mockToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlNxdWlkIEdhbWUgUGxheWVyIiwiaWF0IjoxNTE2MjM5MDIyfQ.mock-signature';
+        // Generate a safe mock token for demo purposes
+        const mockToken = 'mock-jwt-token-' + Math.random().toString(36).substring(2, 15);
         resolve(mockToken);
       }, 1000);
     });
