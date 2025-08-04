@@ -1,0 +1,22 @@
+{
+  "network": "Etherlink Mainnet",
+  "chainId": "42793",
+  "deployer": "0x054d4b7231Cb605C48a04fA0f72Af1E9A7c0A824",
+  "deployedAt": "2025-08-04T05:33:57.612Z",
+  "contracts": {
+    "SquidGameContract": "0xd4A5e748a5fa8Fc3a33a2BFAcE90283d92749C99",
+    "NarrativeContract": "0xc4Cbc3F5CD22A1B1c7EB4484b19605C835B785B0"
+  },
+  "transactionHashes": {
+    "SquidGameContract": "0x8b28850b62143f3510f33d867d19522822f4fa872465cc90d367318e7a64385e",
+    "NarrativeContract": "0x1d48a466780fc47a960e74d6e20546bc4fe029b9392970eea7ad2b222e80ab25"
+  },
+  "gasUsed": {
+    "SquidGameContract": "40192268",
+    "NarrativeContract": "35383130"
+  },
+  "deploymentCosts": {
+    "SquidGameContract": "0.040192268",
+    "NarrativeContract": "0.03538313"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "network": "Etherlink Testnet",
+  "chainId": 128123,
+  "deployer": "0x054d4b7231Cb605C48a04fA0f72Af1E9A7c0A824",
+  "deployedAt": "2025-08-03T16:48:54.361Z",
+  "contracts": {
+    "SquidGameContract": "0xd92A60364E21269EdFFBe264A57c9D1aD678603a",
+    "NarrativeContract": "0xBe74acd184FE8DaE458C8D1BDBD4558146bDa29E"
+  },
+  "explorerUrls": {
+    "SquidGameContract": "https://testnet.explorer.etherlink.com/address/0xd92A60364E21269EdFFBe264A57c9D1aD678603a",
+    "NarrativeContract": "https://testnet.explorer.etherlink.com/address/0xBe74acd184FE8DaE458C8D1BDBD4558146bDa29E"
+  },
+  "transactionHashes": {
+    "SquidGameContract": "0x2672e81c1ac8c07b1e4db22289372daab76185df5f099d4497add05edf81fa4a",
+    "NarrativeContract": "0x28380aa1118518fd03447a11296ce2b4e9e09ad1349223babd8b632acdec1956"
+  }
+}

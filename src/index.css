@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Sans KR', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Custom Squid Game themed styles */
+.squid-gradient {
+  background: linear-gradient(135deg, #F7418F 0%, #00A86B 100%);
+}
+
+.contestant-card {
+  @apply bg-squid-gray border border-gray-600 rounded-lg p-4 transition-all duration-300 hover:border-squid-pink hover:shadow-lg hover:shadow-squid-pink/20;
+}
+
+.game-button {
+  @apply bg-squid-pink hover:bg-squid-pink/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105;
+}
+
+.bet-button {
+  @apply bg-squid-green hover:bg-squid-green/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(247, 65, 143, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(247, 65, 143, 0.8);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Utility classes */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
