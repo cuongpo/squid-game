@@ -289,14 +289,5 @@ npm run test:simulation
 - 🐦 [Twitter](https://twitter.com/tezos)
 - 📧 [Support](mailto:support@example.com)
 
----
-
-## ⚠️ Disclaimer
-
-This is a **gambling application** involving real cryptocurrency. Please:
-- 🎯 **Bet Responsibly**: Only bet what you can afford to lose
-- 🔞 **18+ Only**: Must be of legal gambling age
-- 📍 **Check Local Laws**: Ensure online gambling is legal in your jurisdiction
-- 🎲 **Understand Risks**: Cryptocurrency values can fluctuate
 
 **Built with ❤️ on Etherlink • Powered by Tezos • Enhanced by AI**
