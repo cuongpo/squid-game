@@ -8,7 +8,7 @@ import GameOverScreen from './components/GameOverScreen';
 import WalletConnection from './components/WalletConnection';
 import TransactionStatus from './components/TransactionStatus';
 import NetworkStatus from './components/NetworkStatus';
-import './utils/testGame'; // Load test functions
+// import './utils/testGame'; // Load test functions (disabled for production)
 import './utils/testMainnetConfig'; // Test mainnet configuration
 
 function App() {

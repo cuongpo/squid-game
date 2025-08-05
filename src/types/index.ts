@@ -49,7 +49,7 @@ export interface Contestant {
     luck: number;         // 1-10, affects random events
     charisma: number;     // 1-10, affects alliances
     agility: number;      // 1-10, affects speed-based challenges
-    speed: number;        // 1-10, affects speed-based challenges (alias for agility)
+    speed?: number;       // 1-10, affects speed-based challenges (alias for agility)
     deception: number;    // 1-10, affects bluffing and manipulation
   };
   
