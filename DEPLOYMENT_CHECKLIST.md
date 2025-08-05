@@ -39,7 +39,7 @@ Use this checklist to ensure a smooth deployment of your Squid Game application 
 
 ### 🔧 Build Settings
 - [ ] ✅ Build Command: `npm install && npm run build`
-- [ ] ✅ Start Command: `npm run preview`
+- [ ] ✅ Start Command: `npm start`
 - [ ] ✅ Publish Directory: Leave empty (not needed)
 - [ ] ✅ Node Version: Latest (auto-detected)
 - [ ] ✅ Port Configuration: Automatic (uses $PORT env var)

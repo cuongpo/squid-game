@@ -57,7 +57,7 @@ Fill in the following settings:
 
 **Build & Deploy:**
 - **Build Command**: `npm install && npm run build`
-- **Start Command**: `npm run preview`
+- **Start Command**: `npm start`
 - **Publish Directory**: Leave empty (not needed for Node.js apps)
 
 **Instance Type:**
