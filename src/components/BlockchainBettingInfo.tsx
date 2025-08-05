@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useBlockchainStore } from '../stores/blockchainStore';
 import { Shield, TrendingUp, Clock, ExternalLink } from 'lucide-react';
 import { CURRENT_NETWORK } from '../config/blockchain';

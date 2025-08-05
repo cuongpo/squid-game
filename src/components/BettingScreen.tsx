@@ -8,8 +8,8 @@ import { getContestantsByProbability } from '../utils/contestantUtils';
 import { CURRENT_NETWORK } from '../config/blockchain';
 
 export default function BettingScreen() {
-  const { gameState, bettingState, setGamePhase, simulateNextRound, enableBlockchainLogging } = useGameStore();
-  const { walletState, createGame, currentGameId, disableRoundLogging, setDisableRoundLogging } = useBlockchainStore();
+  const { gameState, setGamePhase, simulateNextRound, enableBlockchainLogging } = useGameStore();
+  const { walletState, currentGameId, disableRoundLogging, setDisableRoundLogging } = useBlockchainStore();
   const [selectedContestantForBet, setSelectedContestantForBet] = useState<string | null>(null);
   
   const aliveContestants = gameState.contestants.filter(c => c.status === 'alive');

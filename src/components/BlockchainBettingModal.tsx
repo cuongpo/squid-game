@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useBlockchainStore } from '../stores/blockchainStore';
 import { MIN_BET_AMOUNT, MAX_BET_AMOUNT } from '../config/blockchain';
 import { X, TrendingUp, AlertCircle, Loader } from 'lucide-react';

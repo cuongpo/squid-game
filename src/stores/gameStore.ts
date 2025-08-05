@@ -70,7 +70,10 @@ export const useGameStore = create<GameStore>((set, get) => ({
     currentPhase: 'intro',
     showContestantDetails: false,
     simulationSpeed: 'normal',
-    autoAdvance: false
+    autoAdvance: false,
+    roundInProgress: false,
+    showEliminations: false,
+    narrativeComplete: false
   },
 
   // Exposed contestants property
@@ -461,13 +464,18 @@ export const useGameStore = create<GameStore>((set, get) => ({
           });
         }
 
+        // Resolve bets with all survivors (handles both single winner and multiple survivors)
+        const finalBettingState = survivors.length > 0 ?
+          resolveBetsWithSurvivors(get().bettingState, survivors) :
+          get().bettingState;
+
         // Log game completion and store results onchain if enabled
         if (narrativeLogger.isReady() && winner) {
           const completionNarrative = [
             `🏆 GAME COMPLETED! 🏆`,
-            `Winner: ${winner.name} (#${winner.number})`,
+            `Winner: ${winner.name} (#${winner.number || 'Unknown'})`,
             `Survived all ${get().gameState.totalRounds} rounds`,
-            `Final stats: Strength ${winner.stats.strength}, Speed ${winner.stats.speed}, Intelligence ${winner.stats.intelligence}, Luck ${winner.stats.luck}`
+            `Final stats: Strength ${winner.stats.strength}, Speed ${winner.stats.speed || winner.stats.agility}, Intelligence ${winner.stats.intelligence}, Luck ${winner.stats.luck}`
           ];
           safeLogNarrative(999, completionNarrative); // Use round 999 for completion
 
@@ -490,11 +498,6 @@ export const useGameStore = create<GameStore>((set, get) => ({
             }
           }
         }
-
-        // Resolve bets with all survivors (handles both single winner and multiple survivors)
-        const finalBettingState = survivors.length > 0 ?
-          resolveBetsWithSurvivors(get().bettingState, survivors) :
-          get().bettingState;
 
         set(state => ({
           gameState: {

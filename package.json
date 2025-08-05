@@ -13,7 +13,8 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
     "security-check": "node scripts/security-check.js",
-    "pre-commit": "npm run security-check && npm run lint"
+    "pre-commit": "npm run security-check && npm run lint",
+    "prepare-deploy": "node scripts/prepare-deployment.js"
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "^2.2.8",

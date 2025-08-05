@@ -1,0 +1,62 @@
+# Render Blueprint for Squid Game Blockchain Application
+# This file configures automatic deployment to Render.com
+
+services:
+  - type: web
+    name: squid-game-blockchain
+    runtime: node
+    plan: free  # Change to 'starter' for production
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    healthCheckPath: /
+    envVars:
+      - key: VITE_NETWORK
+        value: mainnet
+      - key: VITE_OPENAI_API_KEY
+        sync: false  # Set manually in Render dashboard
+      - key: VITE_THIRDWEB_API_KEY
+        sync: false  # Optional - set manually if needed
+    domains:
+      - squid-game-blockchain.onrender.com  # Auto-generated domain
+    
+    # Auto-deploy settings
+    autoDeploy: true
+    branch: main
+    
+    # Build settings
+    buildFilter:
+      paths:
+        - src/**
+        - public/**
+        - package.json
+        - package-lock.json
+        - vite.config.ts
+        - tsconfig.json
+        - index.html
+      ignoredPaths:
+        - README.md
+        - "*.md"
+        - scripts/**
+        - .github/**
+    
+    # Health check settings
+    healthCheckPath: /
+    healthCheckGracePeriod: 30s
+    
+    # Resource settings (for paid plans)
+    # disk:
+    #   name: squid-game-data
+    #   mountPath: /data
+    #   sizeGB: 1
+
+# Optional: Database (if needed in future)
+# databases:
+#   - name: squid-game-db
+#     databaseName: squidgame
+#     user: squidgame_user
+#     plan: free
+
+# Optional: Redis (for caching)
+# - type: redis
+#   name: squid-game-cache
+#   plan: free
