@@ -58,7 +58,7 @@ Fill in the following settings:
 **Build & Deploy:**
 - **Build Command**: `npm install && npm run build`
 - **Start Command**: `npm run preview`
-- **Publish Directory**: `dist`
+- **Publish Directory**: Leave empty (not needed for Node.js apps)
 
 **Instance Type:**
 - **Free Tier**: Select "Free" (sufficient for testing)
